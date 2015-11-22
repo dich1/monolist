@@ -1,4 +1,11 @@
-<%= render 'profile' , user: @user %>
+<% content_for :header do %>
+  <title>
+    <%= @user %> - Monolist
+  </title>
+  <meta name="description" content="<%= @user %>のモノページ。欲しいモノ、持ってるモノを表示しています。">
+  <meta name="keywords" content="Monolist,<%= "#{@user}"%>">
+<% end %>
 
+<%= render 'profile' , user: @user %>
 
 <%= render 'items/list' , items: @items %>
