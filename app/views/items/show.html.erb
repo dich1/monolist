@@ -31,7 +31,7 @@
         <div class="side-box-body">
           <% # TODO Haveしたユーザー一覧 %>
           <% @haves.each do |have| %>
-            <%= link_to( gravatar_for(have), user_path(have) ) %>
+            <%= link_to( gravatar_for(have, size:24), user_path(have) ) %>
           <% end %>
         </div>
       </div>
@@ -40,7 +40,7 @@
         <div class="side-box-body">
           <% # TODO Wantしたユーザー一覧 %>
           <% @wants.each do |want| %>
-            <%= link_to( gravatar_for(want), user_path(want) ) %>
+            <%= link_to( gravatar_for(want, size:24), user_path(want) ) %>
           <% end %>
         </div>
       </div>
