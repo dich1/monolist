@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="container-inner inner-sm clearfix">
+    <% @want_ranking_items.each do |item| %>
+    <div class="item-single-main">
+      <%= item.want_users.count %> haved
+      <div class="image">
+        <div class="img-wrap">
+          <% #TODO 商品イメージ %>
+            <% if image_tag item.medium_image %>
+            <%= image_tag(item.medium_image , alt: item.title) %>
+            <% else %>
+            <%= image_tag("no-image.png" , alt: item.title) %>
+            <% end %>
+        </div>
+      </div>
+      <div class="title">
+        <% #TODO 商品タイトル %>
+        <%= item.title %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
