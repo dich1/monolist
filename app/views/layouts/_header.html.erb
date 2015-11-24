@@ -22,6 +22,8 @@
               <li><%= link_to "新規登録", signup_path %></li>
               <li><%= link_to "ログイン", login_path %></li>
             <% else %>
+              <li><%= link_to "持っているランキング", rankings_have_path %></li>
+              <li><%= link_to "欲しいランキング", rankings_want_path %></li>
               <li>
                 <%= link_to new_item_path do %>
                   <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
