@@ -6,7 +6,7 @@
       <div class="image">
         <div class="img-wrap">
           <% #TODO 商品イメージ %>
-            <% if image_tag item.medium_image %>
+            <% if item.medium_image.present? %>
               <%= image_tag(item.medium_image , alt: item.title) %>
             <% else %>
               <%= image_tag("no-image.png" , alt: item.title) %>
